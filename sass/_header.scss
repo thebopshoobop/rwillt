@@ -1,7 +1,7 @@
 .header {
   background-image: 
-    linear-gradient(rgba(256, 256, 256, 0.6), rgba(256, 256, 256, 1)),
-    url('background.jpg');
+    linear-gradient(rgba(256, 256, 256, 0.2), rgba(256, 256, 256, 1)),
+    url('img/background.jpg');
   
   background-size: cover;
   position: fixed;
@@ -10,8 +10,14 @@
   width: 100%;
   height: 75%;
   z-index: -1;
-  padding-top: 10rem;
 
+  .header-text {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-image:
+      radial-gradient(rgba(256, 256, 256, .7) 40%, rgba(256, 256, 256, 0))
+  }
+  
   h1, p {
     @extend .text-center;
   }
@@ -21,7 +27,7 @@
   .social {
     display: flex;
     justify-content: center;
-    i {
+    a {
       padding: $padding-base-vertical $padding-base-horizontal;
     }
   }

@@ -4,22 +4,28 @@ main {
   background-color: #fff;
  
   
-  > section, > footer {
+  article, footer {
     @include make-row();
   }
 
   h2 {
     @include make-xs-column(12);
+    @extend .text-center;
   }
 
-  p {
+  section {
     @include make-sm-column(8);
+    @include make-lg-column(4);
   }
 
   aside {
     @include make-sm-column(4);
+    @include make-lg-column(2);
+    @extend .center-block;
+    max-width: 300px;
     img {
       @extend .img-responsive;
+      margin-bottom: 5px;
     }
   }
 
