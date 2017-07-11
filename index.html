@@ -30,34 +30,84 @@
     </header>
 
     <main>
-      <article>
+      <section>
         <h2>About Me</h2>
-        <section>
-          <p>I am a builder. I have put together everything from computers to homes to menus. These days I focus on web apps. I'm stocking my toolbox with <a href="https://www.python.org/">Python</a>/<a href="http://flask.pocoo.org/">Flask</a> and <a href="https://nodejs.org/en/">Node.js</a>/<a href="http://expressjs.com/">Express</a> for the server allong with <a href="https://facebook.github.io/react/">React</a> and <a href="https://jquery.com/">jQuery</a> for the browser. My markup is <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">semantic</a> and my stylesheets are <a href="http://sass-lang.com/">Sassy</a>! Let's build something beautiful together.</p>
-        </section>
-        <aside>
-          <img src="img/me.jpg" alt="A portrait of the author atop a mountian.">
-        </aside>
-        <section>
-          <p>When I'm not pounding the keys, you'll likely find me outside. My favorite sports are bicycling and whitewater kayaking, though I've deveoped a bit of a running habit. If I want to take it slow, I'll just grab my camera and get lost somewhere.</p>
-        </section>
-        <aside>
-          <img src="img/moose.jpg" alt="The author, a whitewater kayaker, paddles down a river slide.">
-      </article>
+        <article>
+          <section>
+            <h3>I am a builder.</h3>
+            <p>I've assembled everything from computers to homes to menus. These days I focus on web apps. I'm stocking my toolbox with <a href="https://www.python.org/">Python</a>/<a href="http://flask.pocoo.org/">Flask</a> and <a href="https://nodejs.org/en/">Node.js</a>/<a href="http://expressjs.com/">Express</a> for the server along with <a href="https://facebook.github.io/react/">React</a> and <a href="https://jquery.com/">jQuery</a> for the browser. My markup is <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">semantic</a> and my stylesheets are <a href="http://sass-lang.com/">Sassy</a>. Let's build something beautiful together!</p>
+          </section>
+          <aside>
+            <a href="img/me.jpg">
+              <img src="img/me.jpg" alt="A portrait of the author atop a mountian.">
+            </a>
+          </aside>
+        </article>
+
+        <article>
+          <section>
+            <h3>I am an Explorer.</h3>
+            <p>When I'm not pounding the keys, you'll likely find me outside. I love to cruise the streets and trails on my bike and paddle the rivers in my kayak. Lateley, I've even developed a bit of a running habit. Sometimes I just take it slow, bring my camera, and get lost somewhere.</p>
+          </section>
+          <aside>
+            <a href="img/moose.jpg">
+              <img src="img/moose.jpg" alt="The author, a whitewater kayaker, paddles down a river slide.">
+            </a>
+          </aside>
+
+        </article>
+      </section>
 
       <hr>
 
-      <article>
+      <section>
         <h2>Portfolio</h2>
-        <section>
-          <p>Veniam dolore ipsum anim ea aute enim. Sint deserunt ex laborum fugiat aliqua exercitation tempor labore. Mollit minim dolore proident reprehenderit labore in. Ea ipsum ullamco consectetur voluptate reprehenderit veniam laborum do ut culpa ea. Commodo voluptate nulla cupidatat ad cupidatat.</p>
-        </section>
-        <aside>
-          <img src="#">
-        </aside>
-      </article>
+        <article>
+          <section>
+            <h3><a href="https://github.com/thebopshoobop/halfyserial">halfyserial</a></h3>
+            <p>A Flask app that I built for my home stereo. It controls, via a USB serial adapter, a matrix switch and multi-zone power amplifier. This setup lets me play different things to different rooms, or the same thing everywhere, or whatever combination I feel like. It's a whole-house audio solution like Sonos or Bose SoundTouch, but with more wires and more hacking!</p>
+          </section>
+          <aside>
+            <a href="img/halfyserial.jpg">
+              <img src="img/halfyserial.jpg" alt="A screenshot of the halfyserial web app.">
+            </a>
+          </aside>
+        </article>
+
+        <article>
+          <section>
+            <h3><a href="https://github.com/thebopshoobop/feedfin">feedfin</a></h3>
+            <p>A feed agregator that I built with Flask and the <a href="https://ponyorm.com/">Pony ORM</a>. It uses a <code>ProcessPoolExecutor</code> from the <a href="https://docs.python.org/3/library/concurrent.futures.html">concurrent.futures</a> module to rapidly fetch and parse your feeds in parallel.</p>
+          </section>
+          <aside>
+            <a href="img/feedfin.jpg">
+              <img src="img/feedfin.jpg" alt="A screenshot of the feedfin web app.">
+            </a>
+          </aside>
+
+        </article>
+
+        <article>
+          <section>
+            <h3><a href="https://github.com/thebopshoobop/filmalize">filmalize</a></h3>
+            <p>A tool for standardizing video files, filmalize is a CLI app built with <a href="http://click.pocoo.org/6/">Click</a> that uses <a href="https://www.ffmpeg.org/">ffmpeg</a> to do the converting. Currently filmalize only outputs <code>mp4</code> containers with <code>h264</code> video, <code>aac</code> audio, and <code>mov_text</code> subtitles, but I plan to make the output format configurable. That particular combination was selected for its broad compatibility with web browsers.</p>
+          </section>
+          <aside>
+            <a href="img/filmalize.mp4">
+              <img src="img/filmalize.png" alt="A screenshot of the filmalize CLI app.">
+            </a>
+      </section>
 
         <hr>
+
+      <section>
+        <h2>Contact Me</h2>
+        <address>
+          You can reach me at <a href="mailto:will.timpson@gmail.com">will.timpson@gmail.com</a>
+        </address>
+      </section>
+
+      <hr>
 
       <footer>
         <section>

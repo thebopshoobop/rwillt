@@ -1,0 +1,24 @@
+.center-text {
+  text-align: center;
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.small-padding {
+  padding: $padding-small-vertical $padding-small-horizontal;
+}
+
+@mixin adjust-width($screen, $width) {
+  @media (min-width: $screen) {
+    width: $width;
+  }
+}
+
+@function trans($opacity) {
+  @return rgba(256, 256, 256, $opacity)
+}

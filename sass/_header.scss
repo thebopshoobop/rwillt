@@ -1,6 +1,6 @@
 .header {
-  background-image: 
-    linear-gradient(rgba(256, 256, 256, 0.2), rgba(256, 256, 256, 1)),
+  background-image:
+    linear-gradient(trans(0.2), trans(0.2)),
     url('img/background.jpg');
   
   background-size: cover;
@@ -8,27 +8,31 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 75%;
+  height: 100%;
   z-index: -1;
 
   .header-text {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding: 10rem 0;
     background-image:
-      radial-gradient(rgba(256, 256, 256, .7) 40%, rgba(256, 256, 256, 0))
+      radial-gradient(trans(0.7) 25%, trans(0) 90%);
+ 
+    @media (max-width: $small-screen) {
+      background-image:
+        linear-gradient(trans(0) 10%, trans(0.7) 45%, trans(0.7) 65%, trans(0) 90%);
+    }
   }
   
   h1, p {
-    @extend .text-center;
+    @extend .center-text;
   }
-  p {
-    @extend .lead;
-  }
+  
   .social {
-    display: flex;
-    justify-content: center;
+    @extend .center-flex;
+
     a {
-      padding: $padding-base-vertical $padding-base-horizontal;
+      @extend .small-padding;
+      background-image:
+      radial-gradient(trans(0.2) 10%, trans(0) 80%);
     }
   }
 }

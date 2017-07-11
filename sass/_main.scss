@@ -1,40 +1,43 @@
 main {
-  @extend .container;
-  margin-top: 30rem;
-  background-color: #fff;
- 
-  
-  article, footer {
-    @include make-row();
+  max-width: 1280px;
+  margin: 30rem auto;
+  background-color: $body-bg;
+  padding: $padding-large-vertical $padding-large-horizontal;
+
+
+  h2, footer p, address {
+    @extend .center-text;
   }
 
-  h2 {
-    @include make-xs-column(12);
-    @extend .text-center;
+  h3 {
+    margin-top: 0;
   }
 
-  section {
-    @include make-sm-column(8);
-    @include make-lg-column(4);
-  }
+  article{
+    @extend .center-flex;
+    display: inline-flex;
 
-  aside {
-    @include make-sm-column(4);
-    @include make-lg-column(2);
-    @extend .center-block;
-    max-width: 300px;
-    img {
-      @extend .img-responsive;
-      margin-bottom: 5px;
+    margin-top: $padding-base-vertical;
+
+    @include adjust-width($large-screen, 48%);
+
+    section, aside {
+      @extend .small-padding;
     }
-  }
 
-  footer {
-    p {
-      @extend .text-center;
-    }
     section {
-      @include make-xs-column(12);
+      width: 100%;
+      @include adjust-width($small-screen, 60%);
     }
-  } 
+
+    aside {
+      max-width: 250px;
+      @include adjust-width($small-screen, 40%);
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
