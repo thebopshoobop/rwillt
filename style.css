@@ -1,7 +1,7 @@
 .center-text, .header h1, .header p, main h2, main footer p, main address {
   text-align: center; }
 
-.center-flex, .header .social, .slider .slider-text, main article {
+.center-flex, .header .social, .slider .slider-text, main > section, main article {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -20,7 +20,7 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.42857;
   color: #333333;
   background-color: #fff; }
 
@@ -109,26 +109,29 @@ main {
   margin: 30rem auto;
   background-color: #fff;
   padding: 10px 16px; }
+  main h2, main footer p, main address {
+    width: 100%; }
   main h3 {
     margin-top: 0; }
-  main article {
-    display: inline-flex;
-    margin-top: 6px; }
-    @media (min-width: 1000px) {
-      main article {
-        width: 48%; } }
-    main article section {
-      width: 100%; }
-      @media (min-width: 550px) {
-        main article section {
-          width: 60%; } }
-    main article aside {
-      max-width: 250px; }
-      @media (min-width: 550px) {
-        main article aside {
-          width: 40%; } }
-      main article aside img {
-        width: 100%;
-        height: auto; }
+  main > section {
+    justify-content: flex-start; }
+  main article, main footer {
+    margin-top: 20px; }
+  @media (min-width: 1000px) {
+    main article {
+      width: 50%; } }
+  main article section {
+    width: 100%; }
+    @media (min-width: 550px) {
+      main article section {
+        width: 60%; } }
+  main article aside {
+    max-width: 250px; }
+    @media (min-width: 550px) {
+      main article aside {
+        width: 40%; } }
+    main article aside img {
+      width: 100%;
+      height: auto; }
 
 /*# sourceMappingURL=style.css.map */
