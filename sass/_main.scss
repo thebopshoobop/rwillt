@@ -32,19 +32,25 @@ main {
 
   h2, footer p, address {
     @extend .center-text;
+    width: 100%;
   }
 
   h3 {
     margin-top: 0;
   }
 
+  > section {
+    @extend .center-flex;
+    justify-content: flex-start;
+  }
+
+  article, footer {
+    margin-top: $padding-large-vertical * 2;
+  }
+
   article{
     @extend .center-flex;
-    display: inline-flex;
-
-    margin-top: $padding-base-vertical;
-
-    @include adjust-width($large-screen, 48%);
+    @include adjust-width($large-screen, 50%);
 
     section, aside {
       @extend .small-padding;
