@@ -1,14 +1,14 @@
-.slider {
+#slider {
   position: fixed;
   top: 0;
   margin-top: -100px;
   left: 0;
   width: 100%;
-  transition: .5s;
+  transition: 0.5s;
 
   &.visible {
     margin-top: 0;
-    transition: .5s;
+    transition: 0.5s;
   }
 
   .slider-text {
@@ -29,8 +29,9 @@ main {
   background-color: $body-bg;
   padding: $padding-large-vertical $padding-large-horizontal;
 
-
-  h2, footer p, address {
+  h2,
+  footer p,
+  address {
     @extend .center-text;
     width: 100%;
   }
@@ -44,15 +45,17 @@ main {
     justify-content: flex-start;
   }
 
-  article, footer {
+  article,
+  footer {
     margin-top: $padding-large-vertical * 2;
   }
 
-  article{
+  article {
     @extend .center-flex;
     @include adjust-width($large-screen, 50%);
 
-    section, aside {
+    section,
+    aside {
       @extend .small-padding;
     }
 

@@ -1,36 +1,16 @@
+"use strict";
 
-let slideHandler =  {
-  init: function() {
-    $(document).on('scroll', slideHandler.slide);
-  },
-
-  running: false,
-
-  slide: function() {
-    // rate limit to 10x/sec
-    if (!slideHandler.running) {
-      slideHandler.running = true;
-      slideHandler.doSlide()
-      setTimeout(function() {
-        slideHandler.running = false;
-      }, 100);
-    }
-  },
-
-  doSlide: function() {
-    $target = $('header.slider');
-
-    if ($(document).scrollTop() > 212) {
-      if (!$target.hasClass('visible')) {
-        $target.addClass('visible');
-      }
-
+const slideHandler = function() {
+  const slider = document.getElementById("slider");
+  const slide = function() {
+    if (window.scrollY > 212) {
+      slider.classList.add("visible");
     } else {
-      $target.removeClass('visible');
+      slider.classList.remove("visible");
     }
-  }
-}
+  };
 
-$(
-  slideHandler.init
-)
+  document.addEventListener("scroll", slide);
+};
+
+document.addEventListener("DOMContentLoaded", slideHandler);
